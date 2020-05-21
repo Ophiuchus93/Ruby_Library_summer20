@@ -1,11 +1,13 @@
 <h1>DPL Library</h1>
+<hr />
+<%= link_to "Add New Book", new_book_path %>
 <% @books.each do |book| %>
   <h2>Title: <%= book.title %></h2>
   <h3>Author: <%= book.author %></h3>
   <h3>Pages: <%= book.pages %></h3>
-  <%= link_to "Show", book_path(book) %>
+  <%= link_to "View Book", book_path(book) %>
 <% end %>
 <br />
-<%= link_to "Add A New Book", new_book_path %>
+
 
 

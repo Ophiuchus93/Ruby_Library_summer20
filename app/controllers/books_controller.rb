@@ -11,6 +11,8 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+
+    render:_form
   end
 
   def create
@@ -24,10 +26,11 @@ class BooksController < ApplicationController
   end
 
   def edit
+    render :_form
   end
 
   def update
-    if @book.update
+    if @book.update(book_params)
       redirect_to @book
     else
       render :edit
